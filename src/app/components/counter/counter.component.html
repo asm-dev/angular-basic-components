@@ -1,0 +1,20 @@
+<div class="counter">
+  <h2 class="counter__title">Contador</h2>
+
+  <div class="counter__value">{{ count }}</div>
+
+  <div class="counter__buttons">
+    <button
+      (click)="increment()"
+      class="counter__button counter__button--green"
+    >
+      +
+    </button>
+    <button (click)="decrement()" class="counter__button counter__button--red">
+      -
+    </button>
+    <button (click)="reset()" class="counter__button counter__button--gray">
+      Reiniciar
+    </button>
+  </div>
+</div>

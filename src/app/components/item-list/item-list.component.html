@@ -1,21 +1,23 @@
 <div class="item-list">
-  <h2>Lista de elementos</h2>
+  <h2 class="item-list__title">Lista de tareas</h2>
 
-  <div class="form-group">
+  <div class="item-list__form">
     <input
       type="text"
       [(ngModel)]="newItem"
-      placeholder="Introduce un elemento"
-      class="input"
+      placeholder="Introduce una tarea"
+      class="item-list__input"
     />
-    <button (click)="addItem()" class="add-btn">Agregar</button>
+    <button (click)="addTask()" class="item-list__add-button">Agregar</button>
   </div>
 
   <ul class="item-list__items">
-    @for (item of itemList; let idx = $index; track idx) {
-    <li class="item">
-      {{ item }}
-      <button (click)="removeItem(idx)" class="remove-btn">Quitar</button>
+    @for (item of itemList; let i = $index; track i) {
+    <li class="item-list__item">
+      <span class="item-list__item-text">{{ item }}</span>
+      <button (click)="removeTask(i)" class="item-list__remove-button">
+        Eliminar
+      </button>
     </li>
     }
   </ul>

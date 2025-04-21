@@ -13,19 +13,19 @@ export class ItemListComponent {
   public itemList: string[] = [];
   public newItem: string = '';
 
-  public addItem(): void {
-    const trimmedItem: string = this.newItem.trim();
+  public addTask(): void {
+    const trimmedTask: string = this.newItem.trim();
 
-    if (trimmedItem) {
-      this.itemList.push(trimmedItem);
+    if (trimmedTask) {
+      this.itemList.push(trimmedTask);
       this.newItem = '';
     }
   }
 
-  public removeItem(index: number): void {
-    const itemIndex: boolean = index >= 0 && index < this.itemList.length;
+  public removeTask(index: number): void {
+    const isValidIndex: boolean = index >= 0 && index < this.itemList.length;
 
-    if (itemIndex) {
+    if (isValidIndex) {
       this.itemList.splice(index, 1);
     }
   }
