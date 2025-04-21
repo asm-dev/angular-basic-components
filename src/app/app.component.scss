@@ -1,3 +1,21 @@
 h1 {
   padding-left: 1.5rem;
 }
+
+:host {
+  display: block;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  &__section {
+    width: 100%;
+  }
+}

@@ -1,0 +1,59 @@
+<div class="user-form">
+  <h2 class="user-form__title">User Form</h2>
+
+  <form (submit)="addUser(); $event.preventDefault()" class="user-form__form">
+    <input
+      [(ngModel)]="firstName"
+      name="firstName"
+      type="text"
+      placeholder="Nombre"
+      required
+      class="user-form__input"
+    />
+    <input
+      [(ngModel)]="lastName"
+      name="lastName"
+      type="text"
+      placeholder="Apellido"
+      required
+      class="user-form__input"
+    />
+    <input
+      [(ngModel)]="phone"
+      name="phone"
+      type="tel"
+      placeholder="Teléfono"
+      required
+      class="user-form__input"
+    />
+    <input
+      [(ngModel)]="birthDate"
+      name="birthDate"
+      type="date"
+      required
+      class="user-form__input"
+    />
+    <button type="submit" class="user-form__submit">Añadir</button>
+  </form>
+
+  <table *ngIf="users.length > 0" class="user-form__table">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Teléfono</th>
+        <th>Fecha de nacimiento</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (user of users; track user.phone) {
+      <tr>
+        <td>{{ user.firstName }}</td>
+        <td>{{ user.lastName }}</td>
+        <td>{{ user.phone }}</td>
+        <td>{{ user.birthDate }}</td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>
