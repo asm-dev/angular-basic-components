@@ -1,0 +1,22 @@
+<div class="item-list">
+  <h2>Lista de elementos</h2>
+
+  <div class="form-group">
+    <input
+      type="text"
+      [(ngModel)]="newItem"
+      placeholder="Introduce un elemento"
+      class="input"
+    />
+    <button (click)="addItem()" class="add-btn">Agregar</button>
+  </div>
+
+  <ul class="item-list__items">
+    @for (item of itemList; let idx = $index; track idx) {
+    <li class="item">
+      {{ item }}
+      <button (click)="removeItem(idx)" class="remove-btn">Quitar</button>
+    </li>
+    }
+  </ul>
+</div>

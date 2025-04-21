@@ -1,0 +1,30 @@
+.item-list {
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  .form-group {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .input {
+    flex: 1;
+    padding: 0.25rem;
+  }
+
+  .add-btn,
+  .remove-btn {
+    padding: 0.25rem 0.5rem;
+  }
+
+  .item-list__items {
+    list-style: none;
+    margin-top: 1rem;
+    padding: 0;
+
+    .item {
+      margin-bottom: 0.5rem;
+    }
+  }
+}

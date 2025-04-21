@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { ItemListComponent } from './components/item-list/item-list.component';
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  standalone: true,
+  imports: [ItemListComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'Aplicación de prueba con componentes sencillos';
