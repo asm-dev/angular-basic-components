@@ -14,16 +14,18 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'angular-basic-components-temp' title`, () => {
+  it(`should have the 'basic-components-trial-app' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-basic-components-temp');
+    expect(app.title).toEqual('basic-components-trial-app');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, angular-basic-components-temp');
+    expect(compiled.querySelector('h1')?.textContent).toContain(
+      'Hello, basic-components-trial-app'
+    );
   });
 });
