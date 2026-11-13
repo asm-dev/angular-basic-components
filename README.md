@@ -1,26 +1,26 @@
-# Componentes Básicos en Angular
+# Basic Components in Angular
 
-Este proyecto es una actividad práctica desarrollada para entender los fundamentos de Angular. El objetivo ha sido implementar desde cero una aplicación compuesta por varios componentes reutilizables, aplicando las características modernas del framework y manteniendo una estructura de código clara, mantenible y profesional.
+This project is a hands-on activity developed to understand the fundamentals of Angular. The goal was to build from scratch an application made up of several reusable components, applying the framework's modern features and keeping a clear, maintainable and professional code structure.
 
-La aplicación se compone de tres funcionalidades independientes: una lista de tareas donde se pueden añadir y eliminar elementos, un contador con control de incremento, decremento y reinicio, y un formulario de usuario que recoge datos personales y los muestra en una tabla. Todos ellos han sido implementados como **componentes standalone**, utilizando las herramientas más recientes disponibles en Angular 17.
+The application consists of three independent features: a task list where items can be added and removed, a counter with increment, decrement and reset controls, and a user form that collects personal data and displays it in a table. All of them have been implemented as **standalone components**, using the latest tools available in Angular 17.
 
-Durante el desarrollo, se ha evitado el uso de `NgModules` en favor de una arquitectura basada en componentes autónomos, donde cada uno importa sus propias dependencias de forma explícita. Esto permite un control más claro del árbol de dependencias y una escalabilidad más limpia. También se ha utilizado la nueva directiva estructural `@for` en lugar del tradicional `*ngFor`, como parte de las buenas prácticas actuales para el control de flujo en plantillas.
+During development, the use of `NgModules` was avoided in favor of an architecture based on self-contained components, where each one explicitly imports its own dependencies. This gives clearer control over the dependency tree and cleaner scalability. The new `@for` structural directive was also used instead of the traditional `*ngFor`, as part of current best practices for control flow in templates.
 
-La estructura del proyecto sigue una organización por carpetas bajo `src/app/components`, donde cada componente tiene su lógica, su plantilla HTML y sus estilos en SCSS. A nivel de estilos, se ha optado por una convención **BEM (Block Element Modifier)** para mantener la coherencia visual y evitar conflictos entre componentes. Además, se han aplicado criterios de diseño minimalista y responsive, cuidando el espaciado, el alineado y el comportamiento visual en cada bloque.
+The project structure follows a folder-based organization under `src/app/components`, where each component has its own logic, its HTML template and its SCSS styles. For styling, a **BEM (Block Element Modifier)** convention was chosen to keep visual consistency and avoid conflicts between components. In addition, minimalist and responsive design criteria were applied, taking care of spacing, alignment and visual behavior in each block.
 
-Se han añadido pruebas unitarias para cada componente usando Jasmine y el entorno de test de Angular. Estas pruebas validan la creación de los componentes, su lógica principal y la correcta manipulación del estado interno. Esto refuerza la fiabilidad del código y facilita futuras refactorizaciones.
+Unit tests have been added for each component using Jasmine and Angular's testing environment. These tests validate component creation, their main logic and the correct handling of internal state. This strengthens the reliability of the code and makes future refactoring easier.
 
-Para levantar el proyecto, basta con ejecutar los siguientes comandos:
+To start the project, just run the following commands:
 
 ```
 npm install
 ng serve
 ```
 
-Y para lanzar los tests:
+And to run the tests:
 
 ```
 ng test
 ```
 
-Este proyecto no solo cumple con los requisitos funcionales de la actividad propuesta en el Master que estoy realizando, sino que también incorpora un enfoque reflexivo sobre cómo estructurar correctamente aplicaciones Angular modernas, manteniendo separación de responsabilidades, reutilización de código, buenas prácticas de estilos y cobertura de pruebas automatizadas.
+This project not only meets the functional requirements of the activity set in the Master's program I am taking, but also takes a thoughtful approach to how to properly structure modern Angular applications, keeping separation of concerns, code reuse, good styling practices and automated test coverage.
